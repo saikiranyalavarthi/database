@@ -2,7 +2,7 @@
 <b>
     "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1640781204638-employee.json
 
-Create a database , give it name like ""Human_Resource"". Create a collection inside this named ""employee""
+Create a database , give it name like ""Resource"". Create a collection inside this named ""employee""
 
 Query the collection ""employee"" and list all the documents
 Query the collection ""employee"" and list the employees who are having salary more than 30000
@@ -23,16 +23,16 @@ Delete all the documents from ""employee"" where last company is Y"
 // courses           8.00 KiB
 // local            40.00 KiB
 
-// test> use Human_Resource
-// Human_Resource>
+// test> use Resource
+// Resource>
 // test> show dbs
-// HumanResource  40.00 KiB
+// Resource  40.00 KiB
 // admin          40.00 KiB
 // config         96.00 KiB
 // local          40.00 KiB
-// test> use Human_Resource
-// switched to db Human_Resource
-// Human_Resource> db.employee.insertMany([{
+// test> use Resource
+// switched to db Resource
+// Resource> db.employee.insertMany([{
 // ...        "firstName": "John",
 // ...        "lastName": "Doe",
 // ...        "salary": "25000",
@@ -207,7 +207,7 @@ Delete all the documents from ""employee"" where last company is Y"
 //     '12': ObjectId("638219119fd287b9083c4fe5")
 //   }
 // }
-Human_Resource> db.employee.find().pretty();
+Resource> db.employee.find().pretty();
 [
   {
     _id: ObjectId("638219119fd287b9083c4fd9"),
@@ -379,10 +379,10 @@ Human_Resource> db.employee.find().pretty();
     gradStream: 'EEE'
   }
 ]
-// Human_Resource> db.employee.find({
+// Resource> db.employee.find({
 // ...   "salary" : { $gt:"30000"}
 // ... });
-// Human_Resource> db.employee.find({
+// Resource> db.employee.find({
 // ...   "salary" : { $gt:"30000"}
 // ... });
 [
@@ -465,15 +465,15 @@ Human_Resource> db.employee.find().pretty();
     gradStream: 'EEE'
   }
 ]
-// Human_Resource> db.employee.find({
+// Resource> db.employee.find({
 // ...    "overallExp":{ $gt : "2"}
 // ...    });
 
-// Human_Resource> db.employee.find({
+// Resource> db.employee.find({
 // ...    "overallExp":{ $gt : "2"}
 // ...    });
 
-// Human_Resource> db.employee.find({
+// Resource> db.employee.find({
 // ...      $and:
 // ...      [
 // ...        {
@@ -539,7 +539,7 @@ Human_Resource> db.employee.find().pretty();
     gradStream: 'EEE'
   }
 ]
-// Human_Resource> db.employee.updateMany(
+// Resource> db.employee.updateMany(
 // ...      {
 // ...        "salary": "70000"
 // ...      },
@@ -556,7 +556,7 @@ Human_Resource> db.employee.find().pretty();
 //   modifiedCount: 0,
 //   upsertedCount: 0
 // }
-// Human_Resource>  db.employee.find({
+// Resource>  db.employee.find({
 // ...    "lastCompany":"Y"
 // ...   })
 [
@@ -639,12 +639,12 @@ Human_Resource> db.employee.find().pretty();
     gradStream: 'CSE'
   }
 ]
-// Human_Resource> db.employee.deleteMany({
+// Resource> db.employee.deleteMany({
 // ...      "lastCompany":"Y"
 // ...      });
 // { acknowledged: true, deletedCount: 6 }
-// Human_Resource>
+// Resource>
 // (To exit, press Ctrl+C again or Ctrl+D or type .exit)
-// Human_Resource> db.employee.deleteMany({
+// Resource> db.employee.deleteMany({
 // ...      "lastCompany":"Y"
 // ...      });
